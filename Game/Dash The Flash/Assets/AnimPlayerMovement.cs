@@ -9,7 +9,7 @@ public class AnimPlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private Animator anim;
     private float moveSpeed;
-    private bool facingFront = true;
+    // private bool facingFront = true;
     private Vector3 localScale;
     //  public CharacterController controller;
       public float speed = 6f;
@@ -65,25 +65,22 @@ public class AnimPlayerMovement : MonoBehaviour
           anim.SetBool("isMovingUp",true);
 
       }
+     
+     
+   }
+     
+    //  void LateUpdate()
+    //   {
+    //       if (direction.magnitude<0)
+    //        facingFront = true;
+    //        else if (direction.magnitude>0)
+    //        facingFront = false;
 
-     void Update()
-      {
-        //   rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y);
-            
+    //        if (((facingFront)&& (localScale.x<0))|| ((!facingFront)&&(localScale.x>0)))
+    //           localScale.x *= -1;
 
-      }
-     void LateUpdate()
-      {
-          if (direction.magnitude<0)
-           facingFront = true;
-           else if (direction.magnitude>0)
-           facingFront = false;
-
-           if (((facingFront)&& (localScale.x<0))|| ((!facingFront)&&(localScale.x>0)))
-              localScale.x *= -1;
-
-              transform.localScale = localScale;
-      }
+    //           transform.localScale = localScale;
+    //   }
 
 
       
@@ -107,7 +104,7 @@ public class AnimPlayerMovement : MonoBehaviour
 
 
     }
-    }
+    
 
 
 
